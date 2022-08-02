@@ -17,11 +17,12 @@
 export const version = "v2";
 
 export default {
-  all_alerts: `/api/${version}/alerts`,
+  // all_alerts: `/api/${version}/alerts`,
+  all_alerts: `/api/halo/alerts`,
   alerts_history: `/api/${version}/alerts_history`,
   systemconfig: `api/${version}/systemconfig`,
   login: `api/${version}/login`,
-  csm_user: `api/${version}/csm/users`,
+  csm_user: `api/${version}/system/users`,
   logout: `/api/${version}/logout`,
   udx_registration: `api/${version}/udx_device/registration`,
   udx_registration_token: `api/${version}/udx_device/registration_token`,

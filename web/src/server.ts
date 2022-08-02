@@ -27,7 +27,7 @@ import { SocketService } from "./services/websocket/socket-service";
 const rateLimit = require('express-rate-limit');
 
 require("dotenv").config({ path: __dirname + "/.env" });
-
+ 
 process.on("uncaughtException", e => {
   console.log(e);
   process.exit(1);

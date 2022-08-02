@@ -17,7 +17,23 @@
 module.exports = {
     outputDir: 'web-dist',
     devServer: {
-        proxy: 'http://localhost:28100'
+        
+    //     proxy:  {
+    //         "^/api/": {
+    //           target:'https://ssc-vm-g2-rhev4-3392.colo.seagate.com:31169/',
+    //           pathRewrite: { "^/api/": "/api/" },
+    //     changeOrigin: true,
+    //     logLevel: "debug"
+    //   }
+    // }
+        proxy : {
+            "^/*": {
+                target: "https://ssc-vm-g4-rhev4-0392.colo.seagate.com:31169/",
+                changeOrigin: true
+              },
+        }
+        // host : "ssc-vm-g2-rhev4-3392.colo.seagate.com",
+        // port : 31169,
     },
     configureWebpack: {
         devtool: 'source-map'

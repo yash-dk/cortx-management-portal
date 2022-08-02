@@ -96,7 +96,7 @@ export class HTTP409Error extends HTTPCsmClientError {
 
 export class HTTP422Error extends HTTPCsmClientError {
   readonly statusCode = HttpStatus.UNPROCESSABLE_ENTITY;
-
+  
   constructor(message: string | object = "Unprocessable entity") {
     super(message);
   }

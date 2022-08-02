@@ -427,7 +427,8 @@ export abstract class Api {
         } else if (statusCode == HttpStatus.CONFLICT) {
             return new HTTPError.HTTP409Error(response);
         } else if (statusCode == HttpStatus.UNPROCESSABLE_ENTITY) {
-            return new HTTPError.HTTP422Error(response);
+            let error = new HTTPError.HTTP422Error(response);
+            return error
         } else if (statusCode == HttpStatus.SERVICE_UNAVAILABLE) {
             return new HTTPError.HTTP503Error(response);
         } else {

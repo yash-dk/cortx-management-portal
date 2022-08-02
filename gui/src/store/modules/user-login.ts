@@ -119,18 +119,18 @@ export default class UserLogin extends VuexModule {
 
   @Action({ rawError: true })
   public async getUnsupportedFeaturesAction() {
-    if (this.unsupportedFeatures && !Object.entries(this.unsupportedFeatures).length) {
-      const features = await Api.getAll(apiRegister.unsupported_features);
-      if (features && features.data && features.data.unsupported_features) {
-        const featuresMap = features.data.unsupported_features.reduce((result: any, item: string) => {
-          result[item] = true;
-          return result;
-        }, {});
-        this.context.commit("setUnsupportedFeatures", featuresMap);
-      }
-    }
+    // if (this.unsupportedFeatures && !Object.entries(this.unsupportedFeatures).length) {
+    //   const features = await Api.getAll(apiRegister.unsupported_features);
+    //   if (features && features.data && features.data.unsupported_features) {
+    //     const featuresMap = features.data.unsupported_features.reduce((result: any, item: string) => {
+    //       result[item] = true;
+    //       return result;
+    //     }, {});
+    //     this.context.commit("setUnsupportedFeatures", featuresMap);
+    //   }
+    // }
 
-    return this.unsupportedFeatures;
+    // return this.unsupportedFeatures;
   }
 
   @Action

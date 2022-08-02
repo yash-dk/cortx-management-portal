@@ -48,7 +48,7 @@ export default class PerformanceStats extends VuexModule {
   // Throuthput
   @Action
   public async getThroughputPerformanceStats(queryParams: any) {
-    try {
+    /*try {
       const { metric1, metric2 } = queryParams;
       const metric1Unit = StatsUtility.getUnitStatMatric(queryParams.metric1);
       const metric2Unit = StatsUtility.getUnitStatMatric(queryParams.metric2);
@@ -86,7 +86,7 @@ export default class PerformanceStats extends VuexModule {
     } catch (e) {
       // tslint:disable-next-line: no-console
       console.error("err logger: ", e);
-    }
+    }*/
   }
 
   // Latency
@@ -120,7 +120,7 @@ export default class PerformanceStats extends VuexModule {
   // capacity
   @Action
   public async getCapacityStats(latencyParams: any) {
-    try {
+    /*try {
       const res = await Api.getAll(apiRegister.capacity, latencyParams);
       if (res && res.data) {
         this.context.commit("setCapacityStats", res.data);
@@ -130,7 +130,7 @@ export default class PerformanceStats extends VuexModule {
       this.context.commit("setCapacityStats", {} as DiskCapacityDetails);
       // tslint:disable-next-line: no-console
       console.error("err logger: ", e);
-    }
+    }*/
   }
 
   @Mutation
