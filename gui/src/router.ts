@@ -154,7 +154,8 @@ const router = new Router({
             {
               path: "",
               name: "provisioning-menu",
-              component: CortxProvisioningMenu,
+              component: CortxS3Management,
+              //component: CortxProvisioningMenu,
               meta: {
                 requiresAuth: true,
                 requiredAccess: userPermissions.users + userPermissions.list

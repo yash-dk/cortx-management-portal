@@ -67,8 +67,14 @@ export default class AlertsMixin extends Vue {
     this.alertObject.total_records = 0;
     const res = await Api.getAll(apiRegister.all_alerts, alertQueryParam);
     if (res && res.data) {
+      res.data.alerts.forEach((element:any, index:any) => {
+        res.data.alerts[index]["updated_time"] = parseInt(res.data.alerts[index]["time"]);
+        res.data.alerts[index]["module_type"] = "Demo";
+      });
+      
       this.alertObject = res.data;
-      console.log(res.data.alerts[0].time)
+      console.log(this.alertObject)
+      console.log(this.alertObject.total_records)
       if (this.alertObject.total_records > 200) {
         this.hidePagination = false;
       }

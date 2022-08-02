@@ -45,9 +45,9 @@
             </template>
 
             <template v-slot:item="props">
-              <tr :id="props.item.name">
+              <tr :id="props.item.id">
                 <td id="bucket-name">
-                  {{ props.item.name }}
+                  {{ props.item.id }}
                   <v-tooltip right max-width="300" v-if="props.item.bucket_url && !props.item.bucket_url.includes('/None/')">
                     <template v-slot:activator="{ on }">
                       <img

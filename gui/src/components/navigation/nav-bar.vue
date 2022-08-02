@@ -108,7 +108,7 @@ export default class CortxNavBar extends Vue {
       iconDefault: require("@/assets/navigation/maintenance-grey.svg"),
       iconActive: require("@/assets/navigation/maintenance-white.svg"),
       requiredAccess: "sysconfig"
-    }
+    },
   ];
 
   public mounted() {

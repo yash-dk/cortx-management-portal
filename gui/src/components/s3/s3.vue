@@ -43,11 +43,18 @@ import S3Bucket from "./bucket-creation.vue";
 
 @Component({
   name: "cortx-s3-management",
-  components: { CortxTabs, S3Account, IAMUser, S3Bucket }
+  components: { CortxTabs, S3Bucket, S3Account, IAMUser }
 })
 export default class CortxS3Management extends Vue {
   public tabsInfo: TabsInfo = {
     tabs: [
+      
+      {
+        id: 3,
+        label: "Bucket",
+        show: false,
+        requiredAccess: "s3buckets"
+      },
       {
         id: 1,
         label: "S3 account",
@@ -60,19 +67,13 @@ export default class CortxS3Management extends Vue {
         show: false,
         requiredAccess: "s3iamusers"
       },
-      {
-        id: 3,
-        label: "Bucket",
-        show: false,
-        requiredAccess: "s3buckets"
-      }
     ],
-    selectedTab: 1
+    selectedTab: 3
   };
 
-  private showAccountTab: boolean = true;
+  private showAccountTab: boolean = false;
   private showIAMUserTab: boolean = false;
-  private showBucketTab: boolean = false;
+  private showBucketTab: boolean = true;
 
   public mounted() {
     /*
