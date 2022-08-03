@@ -86,6 +86,13 @@ export default class CortxNavBar extends Vue {
       iconActive: require("@/assets/navigation/manage-white.svg"),
       requiredAccess: "s3accounts",
       featureId: unsupportedFeatures.manage
+    },{
+      title: "Manage S3",
+      path: "/manage-s3",
+      iconDefault: require("@/assets/navigation/manage-grey.svg"),
+      iconActive: require("@/assets/navigation/manage-white.svg"),
+      requiredAccess: "s3accounts",
+      featureId: unsupportedFeatures.manage
     },
     {
       title: "Lyve Pilot",

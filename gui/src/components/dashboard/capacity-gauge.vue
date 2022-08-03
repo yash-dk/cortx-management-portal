@@ -65,7 +65,7 @@ export default class CortxCapacityGauge extends Vue {
   public usedLegendClass = "capacity-used-green";
   public chartDataVal: number;
   public created() {
-    const demoData = [["x", 0]];
+    const demoData = [["x", 37.7]];
     const capacityRes = this.$store
       .dispatch("performanceStats/getCapacityStats")
       .then(capacityC3Data => {

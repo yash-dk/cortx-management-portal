@@ -154,8 +154,8 @@ const router = new Router({
             {
               path: "",
               name: "provisioning-menu",
-              component: CortxS3Management,
-              //component: CortxProvisioningMenu,
+              //component: CortxS3Management,
+              component: CortxProvisioningMenu,
               meta: {
                 requiresAuth: true,
                 requiredAccess: userPermissions.users + userPermissions.list
@@ -178,6 +178,22 @@ const router = new Router({
               meta: {
                 requiresAuth: true,
                 requiredAccess: userPermissions.users + userPermissions.list
+              }
+            }
+          ]
+        },{
+          path: "manage-s3",
+          component: CortxProvisioning,
+          meta: { requiresAuth: true },
+          children: [
+            {
+              path: "",
+              name: "s3",
+              component: CortxS3Management,
+              meta: {
+                requiresAuth: true,
+                requiredAccess:
+                  userPermissions.s3accounts + userPermissions.delete
               }
             }
           ]
